@@ -55,8 +55,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1048729727485090}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.41666663, y: 5.416666, z: 14.999998}
-  m_LocalScale: {x: 0.25, y: 1, z: 0.25}
+  m_LocalPosition: {x: 12.944807, y: 3.0574028, z: 9.029295}
+  m_LocalScale: {x: 0.1875, y: 0.1875, z: 0.1875}
   m_Children:
   - {fileID: 4413019419187240}
   m_Father: {fileID: 0}
@@ -141,7 +141,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 14.06
+  m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -159,7 +159,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -168,7 +168,7 @@ Light:
   m_ShadowAngle: 0
 --- !u!114 &114146926240754260
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1315064766097724}
@@ -180,7 +180,7 @@ MonoBehaviour:
   _guid: 08458876-65ff-4020-bcec-7940329a2359
 --- !u!114 &114150657691123946
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1048729727485090}
@@ -197,7 +197,7 @@ MonoBehaviour:
   _assetGuid: b5ea1f44c2380d14c98af00e2374f1df
 --- !u!114 &114870280015169182
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1048729727485090}
