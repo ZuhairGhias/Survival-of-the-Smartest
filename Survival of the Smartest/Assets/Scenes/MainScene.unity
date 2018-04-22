@@ -141,7 +141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hallPrefab: {fileID: 1448919781362784, guid: 5281d79091ad8c74a9995626dee24b00, type: 2}
-  numberOfSpooks: 0
 --- !u!4 &359881616
 Transform:
   m_ObjectHideFlags: 0
@@ -608,6 +607,23 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 671218631}
+    - target: {fileID: 4398703460957592, guid: 5281d79091ad8c74a9995626dee24b00, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 108980955241401500, guid: 5281d79091ad8c74a9995626dee24b00,
+        type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826599298845294, guid: 5281d79091ad8c74a9995626dee24b00, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735434552855582, guid: 5281d79091ad8c74a9995626dee24b00, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5281d79091ad8c74a9995626dee24b00, type: 2}
   m_IsPrefabParent: 0

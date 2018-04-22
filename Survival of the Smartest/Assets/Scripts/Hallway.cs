@@ -11,8 +11,9 @@ public class Hallway : MonoBehaviour
     public TextMeshProUGUI leftAnswer;
     public TextMeshProUGUI question;
 
-    private bool isGoodHall = true;
-    private bool bias = true;
+    private bool isGoodHall = true; // Tracks whether this hall is the correct or wrong hall
+    private bool bias = true; // bias == true <=> right hall is good
+    private int spookiness; // how spooky is the hallway
 
     public void SetQuestion(Question question, bool bias)
     {
@@ -46,11 +47,11 @@ public class Hallway : MonoBehaviour
         return this.bias;
     }
 
-    internal void SetSpook(int spookNumber)
+    internal void SetSpookiness(int spookiness)
     {
-        switch (spookNumber) {
-            case 1:
-                break;
-        }
+        this.spookiness = spookiness;
+
+        // put spooky logic here
+
     }
 }
