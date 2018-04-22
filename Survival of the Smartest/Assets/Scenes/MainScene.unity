@@ -645,6 +645,14 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4295344680288208, guid: 5281d79091ad8c74a9995626dee24b00, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583020437158902, guid: 5281d79091ad8c74a9995626dee24b00, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.7500005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5281d79091ad8c74a9995626dee24b00, type: 2}
   m_IsPrefabParent: 0
