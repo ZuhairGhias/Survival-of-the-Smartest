@@ -17,6 +17,14 @@ ProCore.meta
 TextMesh\ Pro/
 TextMesh\ Pro.meta
 
+#Pugins
+Plugins/
+Plugins.meta
+
+#Locker
+Locker/
+Locker.meta
+
 # file on crash reports
 sysinfo.txt
 

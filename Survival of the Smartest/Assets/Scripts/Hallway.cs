@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class Hallway : MonoBehaviour
 {
@@ -45,4 +46,11 @@ public class Hallway : MonoBehaviour
         return this.bias;
     }
 
+    internal void SetSpook(int spookNumber)
+    {
+        switch (spookNumber) {
+            case 1:
+                break;
+        }
+    }
 }

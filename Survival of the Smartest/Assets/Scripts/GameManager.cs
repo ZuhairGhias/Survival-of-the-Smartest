@@ -9,12 +9,14 @@ public class GameManager : MonoBehaviour {
     private GameObject rightHall = null;
     private GameObject leftHall = null;
     private GameObject oldHall2 = null;
+    private int spookLevel = 0;
+    private int spookNumber = 0;
 
     public GameObject hallPrefab;
+    public int numberOfSpooks;
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -49,5 +51,23 @@ public class GameManager : MonoBehaviour {
 
         this.currentHall = currentHall;
 
+        if (!currentHall.GetComponent<Hallway>().GetGoodness()) {
+            spookLevel++;
+            spookNumber = ChooseNewSpook();
+        }
+
+        if (bias)
+        {
+            leftHall.GetComponent<Hallway>().SetSpook(spookNumber);
+        }
+        else {
+            rightHall.GetComponent<Hallway>().SetSpook(spookNumber);
+        }
+        
+    }
+
+    private int ChooseNewSpook()
+    {
+        return spookLevel;
     }
 }
