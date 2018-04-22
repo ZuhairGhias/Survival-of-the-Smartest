@@ -11,9 +11,11 @@ public class DoubleDoorBehavior : MonoBehaviour {
     private Quaternion leftDoorRotation;
     private Quaternion rightDoorRotation;
 
-    // door opening speed
-    public float speed = 100f;
-    public bool doorOpen;
+    public float speed = 100f; // door opening speed
+    public float openDegrees = 75f; // how many degrees the door should open to (negative values open the other way)
+    public bool doorOpen = false; // whether the door is currently open
+
+    public bool debugMode = false; // if debug is enabled, then pressing SPACE toggles the doors
 
     void Start()
     {
@@ -37,10 +39,10 @@ public class DoubleDoorBehavior : MonoBehaviour {
     public void OpenDoors()
     {
         // left door open rotation
-        leftDoorRotation = Quaternion.Euler(0f, -75f, 0f);
+        leftDoorRotation = Quaternion.Euler(0f, -openDegrees, 0f);
 
         // right door open rotation
-        rightDoorRotation = Quaternion.Euler(0f, 75f, 0f);
+        rightDoorRotation = Quaternion.Euler(0f, openDegrees, 0f);
 
         doorOpen = true;
     }
@@ -54,7 +56,7 @@ public class DoubleDoorBehavior : MonoBehaviour {
         rightDoorPivot.transform.rotation = Quaternion.RotateTowards(rightDoorPivot.transform.rotation, rightDoorRotation, step);
 
         // debug for easier door opening
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && debugMode)
         {
             if (doorOpen)
             {
