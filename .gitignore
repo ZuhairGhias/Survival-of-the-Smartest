@@ -13,6 +13,10 @@
 ProCore/
 ProCore.meta
 
+#TextMesh Pro
+"TextMesh Pro/"
+"TextMesh Pro.meta"
+
 # file on crash reports
 sysinfo.txt
 
