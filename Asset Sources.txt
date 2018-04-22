@@ -2,3 +2,4 @@ Locker - https://www.turbosquid.com/3d-models/free-max-model-locker-basic-lock/5
 Textures - https://3dtextures.me/
 Blackboard Texture - https://pxhere.com/en/photo/1057578
 Chalk Font - http://www.1001fonts.com/chawp-font.html
+Chalk Sprites - https://www.flaticon.com/packs/web-element-compilation

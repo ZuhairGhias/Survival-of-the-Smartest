@@ -36,12 +36,18 @@ public class GameManager : MonoBehaviour {
             oldHall2 = rightHall;
         }
 
-        this.currentHall = currentHall;
+        bool bias = currentHall.GetComponent<Hallway>().GetBias();
+
+
 
         rightHall = Instantiate(hallPrefab, currentHall.transform.Find("HallRight").position, currentHall.transform.Find("HallRight").rotation);
+        rightHall.GetComponent<Hallway>().SetQuestion(Question.RandomQuestion(), Random.Range(0,2) == 1);
+        rightHall.GetComponent<Hallway>().SetGoodness(bias);
         leftHall = Instantiate(hallPrefab, currentHall.transform.Find("HallLeft").position, currentHall.transform.Find("HallLeft").rotation);
+        leftHall.GetComponent<Hallway>().SetQuestion(Question.RandomQuestion(), Random.Range(0, 2) == 1);
+        leftHall.GetComponent<Hallway>().SetGoodness(!bias);
 
-
+        this.currentHall = currentHall;
 
     }
 }
