@@ -22,5 +22,6 @@ public class HallEnterTrigger : MonoBehaviour {
             
             FindObjectOfType<GameManager>().GenerateNextHall(transform.parent.gameObject);
         }
+        Destroy(this.gameObject);
     }
 }
