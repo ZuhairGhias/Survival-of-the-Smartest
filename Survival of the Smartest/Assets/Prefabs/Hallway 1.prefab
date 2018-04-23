@@ -20995,7 +20995,7 @@ MonoBehaviour:
   - {fileID: 1063561418442752}
   hardScares:
   - {fileID: 1235566769368664}
-  - {fileID: 1706077999865566, guid: 3d04387d218a1dd40bd73297c7704fd5, type: 2}
+  - {fileID: 1415189145763482}
 --- !u!114 &114113079203423300
 MonoBehaviour:
   m_ObjectHideFlags: 1
