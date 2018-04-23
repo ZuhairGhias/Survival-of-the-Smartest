@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour {
     private int spookiness = 0;
 
     public GameObject hallPrefab;
+    public float maxFogIntensity = 0.2f;
+    public float fogRate = 1f;
+
     private int rightAnswers = 0;
     private int wrongAnswers = 0;
     private int spookMultiplierWrong = 10;
@@ -20,6 +23,7 @@ public class GameManager : MonoBehaviour {
     private List<int> mediumSpooks;
     private List<int> hardSpooks;
     private int currentScare = -1;
+    
 
     // Use this for initialization
     void Start () {
@@ -90,7 +94,7 @@ public class GameManager : MonoBehaviour {
         }
 
         // Calculate spookiness
-        spookiness = wrongAnswers * spookMultiplierWrong + rightAnswers * spookMultiplierRight;
+        spookiness = Mathf.Min(wrongAnswers * spookMultiplierWrong + rightAnswers * spookMultiplierRight, 30);
 
         // Set spookiness of current halls
         rightHall.GetComponent<Hallway>().SetSpookiness(spookiness);
@@ -177,5 +181,21 @@ public class GameManager : MonoBehaviour {
             hardSpooks.RemoveAt(scareIndex);
         }
 
+        // And finally, make fog denser
+        StartCoroutine(Fog());
+        
+
+    }
+
+    private IEnumerator Fog()
+    {
+         float targetDensity = maxFogIntensity * spookiness / 30;
+
+        while (RenderSettings.fogDensity < targetDensity)
+        {
+            RenderSettings.fogDensity = RenderSettings.fogDensity + fogRate / 1000;
+            yield return null;
+        }
+        yield return null;
     }
 }
