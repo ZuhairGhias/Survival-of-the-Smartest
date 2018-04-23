@@ -9,5 +9,9 @@ Sounds Used - http://soundbible.com/1094-Spooky-Chains.html
 		-https://www.youtube.com/watch?v=nEeJQQ3SkRA
 		-http://soundbible.com/2173-Waterphone.html
 		-http://soundbible.com/1870-Sqeaking-Door.html
+<<<<<<< HEAD
 		-http://soundbible.com/1658-Mirror-Breaking.html
 		-http://soundbible.com/1789-Loud-Bang.html
+=======
+Lightbulb sound - https://freesound.org/people/ST303/sounds/201788/
+>>>>>>> fda3e29376777ca9c8bf954e730391d9d3e937c0

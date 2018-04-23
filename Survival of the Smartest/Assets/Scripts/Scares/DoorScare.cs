@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorScare : MonoBehaviour {
-
+    
     public AudioSource knockingSound;
     public Collider trigger1;
     public Transform spawnLocation;
@@ -21,7 +21,7 @@ public class DoorScare : MonoBehaviour {
     void Update() {
         if (scareEnabled == true) {
             Vector3 screenPosition = mainCam.WorldToViewportPoint(edwardo.transform.position);
-            print(screenPosition);
+
             if (screenPosition.x > 0 && screenPosition.x < 1 && screenPosition.y > 0 && screenPosition.y < 1 && screenPosition.z > 0) {
                 
                 StartCoroutine(EndScare());
