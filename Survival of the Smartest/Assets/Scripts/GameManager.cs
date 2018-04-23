@@ -19,30 +19,6 @@ public class GameManager : MonoBehaviour {
     private int wrongAnswers = 0;
     private int spookMultiplierWrong = 10;
     private int spookMultiplierRight = 2;
-    private List<int> easySpooks;
-    private List<int> mediumSpooks;
-    private List<int> hardSpooks;
-    private int currentScare = -1;
-    
-
-    // Use this for initialization
-    void Start () {
-        RefreshSpooks();
-	}
-
-    private void RefreshSpooks()
-    {
-        easySpooks = new List<int> { 0, 1, 2, 3, 4 };
-        mediumSpooks = new List<int> { 5, 6, 7, 8, 9 };
-        hardSpooks = new List<int> { 10, 11, 12 };
-
-    }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
-
 
     /// <summary>
     /// Instantiates the next two halls in the game and deletes previous ones.</summary>
@@ -87,7 +63,7 @@ public class GameManager : MonoBehaviour {
         if (!currentHall.GetComponent<Hallway>().GetGoodness())
         {
             wrongAnswers++;
-            ChooseNewScare();
+            StartCoroutine(Fog());
         }
         else {
             rightAnswers++;
@@ -104,86 +80,13 @@ public class GameManager : MonoBehaviour {
         // Set scare for wrong hall
         if (bias)
         {
-            SetScare(leftHall);
+            leftHall.GetComponent<Hallway>().SetRandomScare();
         }
         else {
-            SetScare(rightHall);
+            rightHall.GetComponent<Hallway>().SetRandomScare();
         }
 
 
-
-    }
-    /// <summary>
-    /// Sets up a unique predetermined scare in the wrong hall.</summary>
-    /// <param name="wrongHall">The hall that should not be entered</param>
-    private void SetScare(GameObject leftHall)
-    {
-        switch (currentScare) {
-            case 1:
-                // leftHall.GetComponent<Hallway>().RigLocker();
-                break;
-            case 2:
-                // leftHall.GetComponent<Hallway>().RigLight();
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
-            case 8:
-                break;
-            case 9:
-                break;
-            case 10:
-                break;
-        }
-    }
-    /// <summary>
-    /// Determines the scare to set up in the next wrong hall.</summary>
-    private void ChooseNewScare()
-    {
-        // choose an easy scare
-        if (spookiness < 10)
-        {
-            if (easySpooks.Count == 0)
-            {
-                RefreshSpooks();
-            }
-            int scareIndex = Random.Range(0, easySpooks.Count);
-            currentScare = easySpooks[scareIndex];
-            // gradually exhaust scares
-            easySpooks.RemoveAt(scareIndex);
-        }
-        // choose a medium scare
-        else if (spookiness < 20)
-        {
-            if (mediumSpooks.Count == 0)
-            {
-                RefreshSpooks();
-            }
-            int scareIndex = Random.Range(0, mediumSpooks.Count);
-            currentScare = mediumSpooks[scareIndex];
-            mediumSpooks.RemoveAt(scareIndex);
-        }
-        // choose a hard scare
-        else {
-            if (hardSpooks.Count == 0)
-            {
-                RefreshSpooks();
-            }
-            int scareIndex = Random.Range(0, hardSpooks.Count);
-            currentScare = hardSpooks[scareIndex];
-            hardSpooks.RemoveAt(scareIndex);
-        }
-
-        // And finally, make fog denser
-        StartCoroutine(Fog());
-        
 
     }
 

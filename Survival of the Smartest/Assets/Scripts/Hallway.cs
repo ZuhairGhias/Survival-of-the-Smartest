@@ -19,8 +19,8 @@ public class Hallway : MonoBehaviour
     public Collider hallEnterTrigger;
 
     [Header("Spookiness Settings")]
-    public float minLightIntensity = 0f;
-    public float lightDimmingRate = 0.05f;
+    public float minLightIntensity = 0.1f;
+    public float lightDimmingRate = 1f;
 
     [Header("Scare Settings")]
     public GameObject[] easyScares;
@@ -73,14 +73,15 @@ public class Hallway : MonoBehaviour
     }
 
     public void SetRandomScare() {
-        if (spookiness < 20) {
+        print(spookiness);
+        if (spookiness < 20 && easyScares.Length != 0) {
             int scareIndex = Random.Range(0, easyScares.Length);
             easyScares[scareIndex].SetActive(true);
-        } else if(spookiness < 30) {
+        } else if(spookiness < 30 && mediumScares.Length != 0) {
             int scareIndex = Random.Range(0, mediumScares.Length);
             mediumScares[scareIndex].SetActive(true);
         }
-        else {
+        else if (hardScares.Length != 0) {
             int scareIndex = Random.Range(0, hardScares.Length);
             hardScares[scareIndex].SetActive(true);
         }
@@ -103,7 +104,7 @@ public class Hallway : MonoBehaviour
         float targetIntensity = 1 - (spookiness / 30) * (1 - minLightIntensity);
         while (lights[0].intensity > targetIntensity) {
             for (int i = 0; i < lights.Length; i++) {
-                lights[i].intensity = lights[i].intensity - lightDimmingRate/1000;
+                lights[i].intensity = lights[i].intensity - lightDimmingRate/100;
             }
             yield return null;
         }

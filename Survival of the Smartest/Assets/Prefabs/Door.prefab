@@ -7094,7 +7094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 114714141347391920}
-  openDoor: 0
+  openDoor: 1
 --- !u!114 &114667431936229116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7394,13 +7394,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftDoorPivot: {fileID: 1577125235346336}
   rightDoorPivot: {fileID: 1634853789412750}
-  speed: 125
+  speed: 100
   openDegrees: 75
   doorOpen: 0
   debugMode: 0
   doorEnabled: 1
   doorOpenSound: {fileID: 82653123691901248}
-  doorCloseSound: {fileID: 82103722699314614}
+  doorCloseSound: {fileID: 82653123691901248}
 --- !u!114 &114734921149514594
 MonoBehaviour:
   m_ObjectHideFlags: 1

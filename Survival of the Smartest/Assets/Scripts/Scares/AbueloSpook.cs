@@ -8,8 +8,8 @@ public class AbueloSpook : MonoBehaviour {
     public Transform abueloPrefab;
 
     // origin and destination positions of abuelo (relative to parent object of script)
-    public Vector3 originPosition;
-    public Vector3 destinationPosition;
+    public Transform origin;
+    public Transform destination;
 
     // speed at which abuelo moves
     public float speed = 3f;
@@ -22,12 +22,12 @@ public class AbueloSpook : MonoBehaviour {
     private void Start()
     {
         // calculate the distance between the origin and destination
-        journeyLength = Vector3.Distance(originPosition, destinationPosition);
+        journeyLength = Vector3.Distance(origin.position, destination.position);
     }
 
     public void Spook () {
         // instantiate the abuelo prefab at the origin position and correct rotation
-        abuelo = Instantiate(abueloPrefab, originPosition, transform.rotation, gameObject.transform);
+        abuelo = Instantiate(abueloPrefab, origin.position, transform.rotation);
         abuelo.GetComponent<AudioSource>().Play();
 
         abueloExists = true;
@@ -42,14 +42,18 @@ public class AbueloSpook : MonoBehaviour {
             // move abuelo from origin to destination smoothly
             float distanceCovered = (Time.time - startTime) * speed;
             float fractionCovered = distanceCovered / journeyLength;
-            abuelo.transform.localPosition = Vector3.Lerp(originPosition, destinationPosition, fractionCovered);
+            abuelo.transform.localPosition = Vector3.Lerp(origin.position, destination.position, fractionCovered);
             
             // check if abuelo reached his destination and delete him once he did
-            if (abuelo.localPosition == destinationPosition)
+            if (abuelo.localPosition == destination.position)
             {
                 abueloExists = false;
                 Destroy(abuelo.gameObject);
             }
         }
+    }
+
+    void OnTriggerEnter(Collider col) {
+        Spook();
     }
 }
