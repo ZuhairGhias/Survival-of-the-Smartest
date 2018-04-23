@@ -29,7 +29,7 @@ public class AbueloSpook : MonoBehaviour {
 
     public void Spook () {
         // instantiate the abuelo prefab at the origin position and correct rotation
-        abuelo = (Transform)Instantiate(abueloPrefab, originPosition, Quaternion.Euler(0f,180f,0f), gameObject.transform);
+        abuelo = Instantiate(abueloPrefab, originPosition, Quaternion.Euler(0f,180f,0f), gameObject.transform);
         abuelo.GetComponent<AudioSource>().Play();
 
         abueloExists = true;
@@ -44,10 +44,10 @@ public class AbueloSpook : MonoBehaviour {
             // move abuelo from origin to destination smoothly
             float distanceCovered = (Time.time - startTime) * speed;
             float fractionCovered = distanceCovered / journeyLength;
-            abuelo.transform.position = Vector3.Lerp(originPosition, destinationPosition, fractionCovered);
+            abuelo.transform.localPosition = Vector3.Lerp(originPosition, destinationPosition, fractionCovered);
             
             // check if abuelo reached his destination and delete him once he did
-            if (abuelo.position == destinationPosition)
+            if (abuelo.localPosition == destinationPosition)
             {
                 abueloExists = false;
                 Destroy(abuelo.gameObject);

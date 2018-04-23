@@ -67,8 +67,8 @@ public class DoubleDoorBehavior : MonoBehaviour {
         float step = speed * Time.deltaTime;
 
         // continuously rotate both doors to their desired rotations
-        leftDoorPivot.transform.rotation = Quaternion.RotateTowards(leftDoorPivot.transform.rotation, leftDoorRotation, step);
-        rightDoorPivot.transform.rotation = Quaternion.RotateTowards(rightDoorPivot.transform.rotation, rightDoorRotation, step);
+        leftDoorPivot.transform.localRotation = Quaternion.RotateTowards(leftDoorPivot.transform.localRotation, leftDoorRotation, step);
+        rightDoorPivot.transform.localRotation = Quaternion.RotateTowards(rightDoorPivot.transform.localRotation, rightDoorRotation, step);
 
         // debug for easier door opening
         if (Input.GetKeyDown(KeyCode.Space) && debugMode)
