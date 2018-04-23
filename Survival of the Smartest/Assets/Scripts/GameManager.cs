@@ -72,8 +72,8 @@ public class GameManager : MonoBehaviour {
 
 
         // Instantiate new halls at the children named "HallRight" and "HallLeft" or the current hall
-        rightHall = Instantiate(hallPrefab, currentHall.transform.Find("HallRight").position, currentHall.transform.Find("HallRight").rotation);
-        leftHall = Instantiate(hallPrefab, currentHall.transform.Find("HallLeft").position, currentHall.transform.Find("HallLeft").rotation);
+        rightHall = Instantiate(hallPrefab, currentHall.GetComponent<Hallway>().rightHallPosition.position, currentHall.GetComponent<Hallway>().rightHallPosition.rotation);
+        leftHall = Instantiate(hallPrefab, currentHall.GetComponent<Hallway>().leftHallPosition.position, currentHall.GetComponent<Hallway>().leftHallPosition.rotation);
 
         // Set the halls with a question and random bias
         rightHall.GetComponent<Hallway>().SetQuestion(Question.RandomQuestion(), Random.Range(0, 2) == 1);
