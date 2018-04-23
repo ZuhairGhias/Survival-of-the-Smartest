@@ -18,23 +18,31 @@ public class DoubleDoorBehavior : MonoBehaviour {
     public bool debugMode = false; // if debug is enabled, then pressing SPACE toggles the doors
     public bool doorEnabled = true; // true means door will open when requested, false always stays closed
 
+    // sound effects
+    public AudioSource doorOpenSound;
+    public AudioSource doorCloseSound;
+
     void Start()
     {
         leftDoorRotation = new Quaternion();
         rightDoorRotation = new Quaternion();
-
-        CloseDoors();
     }
 
     public void CloseDoors()
     {
-        // left door closed rotation
-        leftDoorRotation = Quaternion.Euler(0f, 0f, 0f);
+        if (doorEnabled)
+        {
+            // left door closed rotation
+            leftDoorRotation = Quaternion.Euler(0f, 0f, 0f);
 
-        // right door closed rotation
-        rightDoorRotation = Quaternion.Euler(0f, 0f, 0f);
+            // right door closed rotation
+            rightDoorRotation = Quaternion.Euler(0f, 0f, 0f);
 
-        doorOpen = false;
+            // play the sound
+            doorCloseSound.Play();
+
+            doorOpen = false;
+        }
     }
 
     public void OpenDoors()
@@ -46,6 +54,9 @@ public class DoubleDoorBehavior : MonoBehaviour {
 
             // right door open rotation
             rightDoorRotation = Quaternion.Euler(0f, openDegrees, 0f);
+
+            // play the sound
+            doorOpenSound.Play();
 
             doorOpen = true;
         }
