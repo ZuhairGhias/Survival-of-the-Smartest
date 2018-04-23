@@ -4173,7 +4173,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1466255887669094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.6999999, z: -19.25}
+  m_LocalPosition: {x: 0, y: 1.6999999, z: -8}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 4505213740350840}
@@ -20198,13 +20198,13 @@ MonoBehaviour:
   test: 0
   testScare: {fileID: 1720685980778870}
   easyScares:
-  - {fileID: 1764561461000558}
-  - {fileID: 1048136290860774}
   - {fileID: 1466255887669094}
+  - {fileID: 1048136290860774}
   mediumScares:
+  - {fileID: 1764561461000558}
   - {fileID: 1063561418442752}
-  - {fileID: 1720685980778870}
   hardScares:
+  - {fileID: 1720685980778870}
   - {fileID: 1987164726173446}
 --- !u!114 &114113079203423300
 MonoBehaviour:
@@ -30879,13 +30879,6 @@ MonoBehaviour:
     - {fileID: 1509772179916306}
     - {fileID: 1520990952245474}
     - {fileID: 1684764299700828}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
     - {fileID: 1063561418442752}
     - {fileID: 1048136290860774}
     - {fileID: 1764561461000558}
