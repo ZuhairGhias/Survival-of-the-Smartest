@@ -5,3 +5,4 @@ Chalk Sprites - https://www.flaticon.com/packs/web-element-compilation
 Nested Prefabs - https://www.visualdesigncafe.com/nestedprefabs/trial/
 Lockers - https://assetstore.unity.com/packages/3d/props/locker-56405
 Abuelo Scream - https://freesound.org/people/Sea%20Fury/sounds/48662/
+Footsteps - https://freesound.org/people/InspectorJ/sounds/336598/
