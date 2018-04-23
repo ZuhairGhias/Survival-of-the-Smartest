@@ -5,13 +5,9 @@ Chalk Sprites - https://www.flaticon.com/packs/web-element-compilation
 Nested Prefabs - https://www.visualdesigncafe.com/nestedprefabs/trial/
 Lockers - https://assetstore.unity.com/packages/3d/props/locker-56405
 Sounds Used - http://soundbible.com/1094-Spooky-Chains.html
-		-http://soundbible.com/1738-Little-Demon-Girl-Song.html
 		-https://www.youtube.com/watch?v=nEeJQQ3SkRA
 		-http://soundbible.com/2173-Waterphone.html
 		-http://soundbible.com/1870-Sqeaking-Door.html
-<<<<<<< HEAD
 		-http://soundbible.com/1658-Mirror-Breaking.html
 		-http://soundbible.com/1789-Loud-Bang.html
-=======
-Lightbulb sound - https://freesound.org/people/ST303/sounds/201788/
->>>>>>> fda3e29376777ca9c8bf954e730391d9d3e937c0
+		-https://freesound.org/people/geoneo0/sounds/193809/

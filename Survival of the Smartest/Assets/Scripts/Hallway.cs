@@ -24,6 +24,8 @@ public class Hallway : MonoBehaviour
     public float lightDimmingRate = 1f;
 
     [Header("Scare Settings")]
+    public bool test;
+    public GameObject testScare = null;
     public GameObject[] easyScares;
     public GameObject[] mediumScares;
     public GameObject[] hardScares;
@@ -75,7 +77,10 @@ public class Hallway : MonoBehaviour
 
     public void SetRandomScare() {
         print(spookiness);
-        if (spookiness < 20 && easyScares.Length != 0) {
+        if (testScare != null && test) {
+            testScare.SetActive(true);
+        }
+        else if (spookiness < 20 && easyScares.Length != 0) {
             int scareIndex = Random.Range(0, easyScares.Length);
             easyScares[scareIndex].SetActive(true);
         } else if(spookiness < 30 && mediumScares.Length != 0) {
