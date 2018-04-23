@@ -60,15 +60,26 @@ public class Hallway : MonoBehaviour
 
     }
 
+
     private IEnumerator DimLights(float spookiness)
     {
         Light[] lights = GetComponentsInChildren<Light>();
-        
+
+        // initialize light intensity
+        float initalIntensity = 1 - ((spookiness - 10) / 30) * (1 - minLightIntensity);
+        for (int i = 0; i < lights.Length; i++)
+        {
+            if (lights[i].intensity > initalIntensity) {
+                lights[i].intensity = initalIntensity;
+            }
+            
+        }
+
+        //gradually reduce light intensity
         float targetIntensity = 1 - (spookiness / 30) * (1 - minLightIntensity);
-        print(targetIntensity);
         while (lights[0].intensity > targetIntensity) {
             for (int i = 0; i < lights.Length; i++) {
-                lights[i].intensity = lights[i].intensity - lightDimmingRate;
+                lights[i].intensity = lights[i].intensity - lightDimmingRate/1000;
             }
             yield return null;
         }
