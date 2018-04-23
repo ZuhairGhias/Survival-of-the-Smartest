@@ -834,6 +834,46 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 108980955241401500, guid: 5281d79091ad8c74a9995626dee24b00,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015006807363700, guid: 5281d79091ad8c74a9995626dee24b00, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015006807363700, guid: 5281d79091ad8c74a9995626dee24b00, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015006807363700, guid: 5281d79091ad8c74a9995626dee24b00, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015006807363700, guid: 5281d79091ad8c74a9995626dee24b00, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015006807363700, guid: 5281d79091ad8c74a9995626dee24b00, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 108980955241401500, guid: 5281d79091ad8c74a9995626dee24b00,
+        type: 2}
+      propertyPath: m_Range
+      value: 8.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 108980955241401500, guid: 5281d79091ad8c74a9995626dee24b00,
+        type: 2}
+      propertyPath: m_SpotAngle
+      value: 168.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 108980955241401500, guid: 5281d79091ad8c74a9995626dee24b00,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5281d79091ad8c74a9995626dee24b00, type: 2}
   m_IsPrefabParent: 0
