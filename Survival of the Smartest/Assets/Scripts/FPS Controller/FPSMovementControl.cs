@@ -49,8 +49,9 @@ public class FPSMovementControl : MonoBehaviour {
         Vector3 moveDirSide = transform.right * horizontalAmount * walkSpeed;
         Vector3 moveDirForward = transform.forward * verticalAmount * walkSpeed;
 
-        characterController.SimpleMove(moveDirSide);
-        characterController.SimpleMove(moveDirForward);
+        Vector3 moveVector = Vector3.Normalize(moveDirSide + moveDirForward) * walkSpeed;
+
+        characterController.SimpleMove(moveVector);
 
     }
 }
