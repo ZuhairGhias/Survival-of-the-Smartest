@@ -19,6 +19,7 @@ public class Hallway : MonoBehaviour
     public Collider hallEnterTrigger;
 
     [Header("Spookiness Settings")]
+    public float maxLightIntensity = 1f;
     public float minLightIntensity = 0.1f;
     public float lightDimmingRate = 1f;
 
@@ -91,20 +92,20 @@ public class Hallway : MonoBehaviour
         Light[] lights = GetComponentsInChildren<Light>();
 
         // initialize light intensity
-        float initalIntensity = 1 - ((spookiness - 10) / 30) * (1 - minLightIntensity);
+        float initialIntensity = maxLightIntensity - ((spookiness - 10) / 30) * (maxLightIntensity - minLightIntensity);
         for (int i = 0; i < lights.Length; i++)
         {
-            if (lights[i].intensity > initalIntensity) {
-                lights[i].intensity = initalIntensity;
+            if (lights[i].intensity > initialIntensity) {
+                lights[i].intensity = initialIntensity;
             }
             
         }
 
         //gradually reduce light intensity
-        float targetIntensity = 1 - (spookiness / 30) * (1 - minLightIntensity);
+        float targetIntensity = maxLightIntensity - (spookiness / 30) * (maxLightIntensity - minLightIntensity);
         while (lights[0].intensity > targetIntensity) {
             for (int i = 0; i < lights.Length; i++) {
-                lights[i].intensity = lights[i].intensity - lightDimmingRate/100;
+                lights[i].intensity = lights[i].intensity - lightDimmingRate/1000;
             }
             yield return null;
         }
