@@ -20,6 +20,10 @@ public class HallEnterTrigger : MonoBehaviour {
         print("Triggered");
         if (col.gameObject.tag == "Player") {
             FindObjectOfType<GameManager>().GenerateNextHall(transform.parent.gameObject);
+
+            // call the Abuelo spook
+            GetComponentInParent<AbueloSpook>().Spook();
+
             print(transform.parent.gameObject.GetComponent<Hallway>().GetGoodness());
             Destroy(this.gameObject);
         }

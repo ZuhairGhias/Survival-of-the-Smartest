@@ -23,13 +23,11 @@ public class AbueloSpook : MonoBehaviour {
     {
         // calculate the distance between the origin and destination
         journeyLength = Vector3.Distance(originPosition, destinationPosition);
-
-        Spook();
     }
 
     public void Spook () {
         // instantiate the abuelo prefab at the origin position and correct rotation
-        abuelo = Instantiate(abueloPrefab, originPosition, Quaternion.Euler(0f,180f,0f), gameObject.transform);
+        abuelo = Instantiate(abueloPrefab, originPosition, transform.rotation, gameObject.transform);
         abuelo.GetComponent<AudioSource>().Play();
 
         abueloExists = true;
