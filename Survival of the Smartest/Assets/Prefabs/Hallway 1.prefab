@@ -4347,7 +4347,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1048136290860774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03125, y: 0.99375, z: -3.9375}
+  m_LocalPosition: {x: 0.049999952, y: 0.99999994, z: -8.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4505213740350840}
@@ -19518,7 +19518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4182454190223848}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82510010856731064}
 --- !u!114 &114030451300109378
 MonoBehaviour:
@@ -19939,7 +19939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4695013963927690}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82395318942294478}
 --- !u!114 &114056414387502886
 MonoBehaviour:
@@ -20052,7 +20052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4277582546020718}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82476333564586398}
 --- !u!114 &114081891961013362
 MonoBehaviour:
@@ -20126,7 +20126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4389128167553082}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82413534644647462}
 --- !u!114 &114106801618588448
 MonoBehaviour:
@@ -20195,11 +20195,12 @@ MonoBehaviour:
   maxLightIntensity: 1
   minLightIntensity: 0
   lightDimmingRate: 1
-  test: 0
+  test: 1
   testScare: {fileID: 1720685980778870}
   easyScares:
   - {fileID: 1466255887669094}
   - {fileID: 1048136290860774}
+  - {fileID: 1415189145763482}
   mediumScares:
   - {fileID: 1764561461000558}
   - {fileID: 1063561418442752}
@@ -22229,7 +22230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4260318925491384}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82868708510884700}
 --- !u!114 &114191926313406378
 MonoBehaviour:
@@ -22307,7 +22308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4812304715936348}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82276644840174716}
 --- !u!114 &114214906314245196
 MonoBehaviour:
@@ -22374,7 +22375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4604799915222706}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82918582115899974}
 --- !u!114 &114222073285532240
 MonoBehaviour:
@@ -22424,7 +22425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4194053425201276}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82849167353455962}
 --- !u!114 &114239043126993412
 MonoBehaviour:
@@ -23240,7 +23241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4189836639536468}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82825974963502050}
 --- !u!114 &114280423455385548
 MonoBehaviour:
@@ -23382,7 +23383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4666603303795742}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82526880220143686}
 --- !u!114 &114293804314948964
 MonoBehaviour:
@@ -23847,7 +23848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4551173038365294}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82696783877490524}
 --- !u!114 &114334812481543134
 MonoBehaviour:
@@ -24291,7 +24292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4477105351525044}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82320075405666666}
 --- !u!114 &114367030669731932
 MonoBehaviour:
@@ -24670,7 +24671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4820291520351348}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82798059261731902}
 --- !u!114 &114378834778283176
 MonoBehaviour:
@@ -26782,7 +26783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4894802712463774}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82847305648912110}
 --- !u!114 &114424423905551440
 MonoBehaviour:
@@ -26902,7 +26903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4584721082339450}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82065282755199594}
 --- !u!114 &114442321171918874
 MonoBehaviour:
@@ -26957,7 +26958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4196201845141760}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82415436596450372}
 --- !u!114 &114453277026280106
 MonoBehaviour:
@@ -28092,7 +28093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4409877659334378}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82826780330296126}
 --- !u!114 &114480278717577538
 MonoBehaviour:
@@ -28117,7 +28118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4994178180609972}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82597333239782530}
 --- !u!114 &114482069507717978
 MonoBehaviour:
@@ -28184,7 +28185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4917721323493530}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82518080002749680}
 --- !u!114 &114489476207821572
 MonoBehaviour:
@@ -29370,7 +29371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4866522497541896}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82363714695462570}
 --- !u!114 &114498073765465578
 MonoBehaviour:
@@ -29723,7 +29724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4697186465280818}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82650279056279498}
 --- !u!114 &114512495533218238
 MonoBehaviour:
@@ -29790,7 +29791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4117357942799968}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82284610580872684}
 --- !u!114 &114523975316423134
 MonoBehaviour:
@@ -30440,7 +30441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4076477376826262}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82625037240737600}
 --- !u!114 &114572221299975034
 MonoBehaviour:
@@ -30999,7 +31000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4107584133221308}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82933867140990652}
 --- !u!114 &114599914754883624
 MonoBehaviour:
@@ -31347,7 +31348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4930552596640724}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82649864727741374}
 --- !u!114 &114608021827881852
 MonoBehaviour:
@@ -32888,7 +32889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4449488418274282}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82677054807589384}
 --- !u!114 &114663169467196858
 MonoBehaviour:
@@ -33235,7 +33236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4423437082421522}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82822481502497538}
 --- !u!114 &114670800244040160
 MonoBehaviour:
@@ -33676,7 +33677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4209908520459418}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82196942515312608}
 --- !u!114 &114722473640246472
 MonoBehaviour:
@@ -34945,7 +34946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4748757267617290}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82441917822756182}
 --- !u!114 &114745914191572840
 MonoBehaviour:
@@ -35947,7 +35948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4476674747681228}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82196414055076430}
 --- !u!114 &114794881104267698
 MonoBehaviour:
@@ -35961,7 +35962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4963757362296934}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82407248305088410}
 --- !u!114 &114797392084951476
 MonoBehaviour:
@@ -35975,7 +35976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4105511621943146}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82235215290421198}
 --- !u!114 &114798533963937684
 MonoBehaviour:
@@ -36770,7 +36771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4514997837095126}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82568059314622054}
 --- !u!114 &114838835783510648
 MonoBehaviour:
@@ -36796,7 +36797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4380190181429782}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82417068475234648}
 --- !u!114 &114844361462637476
 MonoBehaviour:
@@ -36968,7 +36969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4502648537200988}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82959794865075268}
 --- !u!114 &114869300006782086
 MonoBehaviour:
@@ -38165,7 +38166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4047509079314932}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82282152807235082}
 --- !u!114 &114892318114055222
 MonoBehaviour:
@@ -38299,7 +38300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4645086236779964}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82052925162819524}
 --- !u!114 &114928640054978522
 MonoBehaviour:
@@ -38790,7 +38791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4799247836316788}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82311415275524280}
 --- !u!114 &114960706449249958
 MonoBehaviour:
@@ -39608,7 +39609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4978746627141328}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82336215773323252}
 --- !u!114 &114987284304858222
 MonoBehaviour:
@@ -40690,7 +40691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4048054687493928}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82040463752537140}
 --- !u!114 &114997414241441876
 MonoBehaviour:

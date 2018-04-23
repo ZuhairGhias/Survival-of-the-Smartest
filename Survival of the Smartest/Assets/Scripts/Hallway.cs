@@ -102,6 +102,7 @@ public class Hallway : MonoBehaviour
         {
             if (lights[i].intensity > initialIntensity) {
                 lights[i].intensity = initialIntensity;
+                lights[i].GetComponentInParent<Renderer>().material.SetColor("_EmissionColor", new Color(initialIntensity, initialIntensity, initialIntensity, 0));
             }
             
         }
@@ -110,7 +111,9 @@ public class Hallway : MonoBehaviour
         float targetIntensity = maxLightIntensity - (spookiness / 30) * (maxLightIntensity - minLightIntensity);
         while (lights[0].intensity > targetIntensity) {
             for (int i = 0; i < lights.Length; i++) {
-                lights[i].intensity = lights[i].intensity - lightDimmingRate/1000;
+                float newIntensity = lights[i].intensity - lightDimmingRate / 1000;
+                lights[i].intensity = newIntensity;
+                lights[i].GetComponentInParent<Renderer>().material.SetColor("_EmissionColor", new Color(newIntensity, newIntensity, newIntensity, 0));
             }
             yield return null;
         }

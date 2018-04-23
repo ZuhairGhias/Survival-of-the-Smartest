@@ -10,6 +10,7 @@ public class RiggedLight : MonoBehaviour {
     public float crashSoundDelay = 0.3f;
     public AudioClip bangSound;
     public AudioClip crashSound;
+    private bool broken = false;
 
     // Use this for initialization
     void Start () {
@@ -49,11 +50,15 @@ public class RiggedLight : MonoBehaviour {
     }
 
     public void fall() {
-        StopAllCoroutines();
-        TurnOff();
-        GetComponent<AudioSource>().Stop();
-        GetComponent<Rigidbody>().useGravity = true;
-        StartCoroutine(PlayCrashSound());
+        if (!broken) {
+            StopAllCoroutines();
+            TurnOff();
+            GetComponent<AudioSource>().Stop();
+            GetComponent<Rigidbody>().useGravity = true;
+            StartCoroutine(PlayCrashSound());
+            broken = true;
+        }
+        
 
     }
 

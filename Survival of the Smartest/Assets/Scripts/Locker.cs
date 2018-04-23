@@ -22,7 +22,7 @@ public class Locker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (isOpen) {
-            door.localRotation = Quaternion.Slerp(door.localRotation, openRotation, Time.deltaTime*openRate);
+            door.localRotation = Quaternion.Slerp(Quaternion.Euler(0, 0, 0), openRotation, Time.deltaTime*openRate);
             
         }
 	}

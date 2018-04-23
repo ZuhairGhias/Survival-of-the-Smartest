@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 4479170896960092}
-  openRate: 0.75
+  openRate: 0.2
   doorSound: {fileID: 82099328305181214}
 --- !u!114 &114820613946851168
 MonoBehaviour:
