@@ -8,6 +8,7 @@ public class LightScare : MonoBehaviour {
     public GameObject riggedLightPrefab;
 
     private GameObject riggedLight = null;
+    private bool triggered = false;
 
 	// Use this for initialization
 	void Start () {
@@ -21,11 +22,16 @@ public class LightScare : MonoBehaviour {
 
     public void Trigger()
     {
-        GameObject light = lights[Random.Range(0, lights.Length)];
-        Vector3 lightPosition = light.transform.position;
-        Quaternion lightRotation = light.transform.rotation;
-        Destroy(light);
-        GameObject riggedLight = Instantiate(riggedLightPrefab, lightPosition, lightRotation);
+        if (!triggered) {
+            GameObject light = lights[Random.Range(0, lights.Length)];
+            Vector3 lightPosition = light.transform.position;
+            Quaternion lightRotation = light.transform.rotation;
+            Destroy(light);
+            GameObject riggedLight = Instantiate(riggedLightPrefab, lightPosition, lightRotation, this.transform);
+            triggered = true;
+        }
+
+        
     }
 
 }
