@@ -16,6 +16,7 @@ public class DoubleDoorBehavior : MonoBehaviour {
     public bool doorOpen = false; // whether the door is currently open
 
     public bool debugMode = false; // if debug is enabled, then pressing SPACE toggles the doors
+    public bool doorEnabled = true; // true means door will open when requested, false always stays closed
 
     void Start()
     {
@@ -38,13 +39,16 @@ public class DoubleDoorBehavior : MonoBehaviour {
 
     public void OpenDoors()
     {
-        // left door open rotation
-        leftDoorRotation = Quaternion.Euler(0f, -openDegrees, 0f);
+        if (doorEnabled)
+        {
+            // left door open rotation
+            leftDoorRotation = Quaternion.Euler(0f, -openDegrees, 0f);
 
-        // right door open rotation
-        rightDoorRotation = Quaternion.Euler(0f, openDegrees, 0f);
+            // right door open rotation
+            rightDoorRotation = Quaternion.Euler(0f, openDegrees, 0f);
 
-        doorOpen = true;
+            doorOpen = true;
+        }
     }
 
     public void Update()
