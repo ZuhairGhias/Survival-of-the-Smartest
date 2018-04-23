@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System;
 
 public class Hallway : MonoBehaviour
 {
-
+    [Header("Blackboard References")]
     public TextMeshProUGUI rightAnswer;
     public TextMeshProUGUI leftAnswer;
     public TextMeshProUGUI question;
 
+    [Header("Hallway References")]
     [Tooltip("The position and rotation the left hall will begin")]
     public Transform leftHallPosition;
     [Tooltip("The position and rotation the right hall will begin")]
@@ -18,8 +18,14 @@ public class Hallway : MonoBehaviour
     [Tooltip("The enter trigger for this hall with EnterTriggerScript attached")]
     public Collider hallEnterTrigger;
 
+    [Header("Spookiness Settings")]
     public float minLightIntensity = 0f;
     public float lightDimmingRate = 0.05f;
+
+    [Header("Scare Settings")]
+    public GameObject[] easyScares;
+    public GameObject[] mediumScares;
+    public GameObject[] hardScares;
 
     private bool isGoodHall = true; // Tracks whether this hall is the correct or wrong hall
     private bool bias = true; // bias == true <=> right hall is good
@@ -57,7 +63,7 @@ public class Hallway : MonoBehaviour
         return this.bias;
     }
 
-    internal void SetSpookiness(int spookiness)
+    public void SetSpookiness(int spookiness)
     {
         this.spookiness = spookiness;
 
@@ -66,7 +72,19 @@ public class Hallway : MonoBehaviour
 
     }
 
-
+    public void SetRandomScare() {
+        if (spookiness < 20) {
+            int scareIndex = Random.Range(0, easyScares.Length);
+            easyScares[scareIndex].SetActive(true);
+        } else if(spookiness < 30) {
+            int scareIndex = Random.Range(0, mediumScares.Length);
+            mediumScares[scareIndex].SetActive(true);
+        }
+        else {
+            int scareIndex = Random.Range(0, hardScares.Length);
+            hardScares[scareIndex].SetActive(true);
+        }
+    }
     private IEnumerator DimLights(float spookiness)
     {
         Light[] lights = GetComponentsInChildren<Light>();
