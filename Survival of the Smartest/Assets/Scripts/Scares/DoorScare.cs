@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorScare : MonoBehaviour {
-
+    
     public AudioSource knockingSound;
     public Collider trigger1;
     public Transform spawnLocation;
