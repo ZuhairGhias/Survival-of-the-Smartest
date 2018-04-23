@@ -11,13 +11,19 @@ public class Hallway : MonoBehaviour
     public TextMeshProUGUI leftAnswer;
     public TextMeshProUGUI question;
 
+    [Tooltip("The position and rotation the left hall will begin")]
+    public Transform leftHallPosition;
+    [Tooltip("The position and rotation the right hall will begin")]
+    public Transform rightHallPosition;
+    [Tooltip("The enter trigger for this hall with EnterTriggerScript attached")]
+    public Collider hallEnterTrigger;
+
     public float minLightIntensity = 0f;
     public float lightDimmingRate = 0.05f;
 
     private bool isGoodHall = true; // Tracks whether this hall is the correct or wrong hall
     private bool bias = true; // bias == true <=> right hall is good
     private int spookiness; // how spooky is the hallway
-    
 
     public void SetQuestion(Question question, bool bias)
     {
