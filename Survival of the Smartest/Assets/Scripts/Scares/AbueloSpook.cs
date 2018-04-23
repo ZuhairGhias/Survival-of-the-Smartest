@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class AbueloSpook : MonoBehaviour {
 
-    // Abuelo Prefab
+    // Abuelo himself
     public Transform abueloPrefab;
+    private bool abueloExists = false;
+    private Transform abuelo;
 
     // origin and destination positions of abuelo (relative to parent object of script)
     public Transform origin;
@@ -15,9 +17,6 @@ public class AbueloSpook : MonoBehaviour {
     public float speed = 3f;
     private float startTime;
     private float journeyLength;
-
-    private bool abueloExists = false;
-    private Transform abuelo;
 
     private void Start()
     {
@@ -32,6 +31,9 @@ public class AbueloSpook : MonoBehaviour {
 
         abueloExists = true;
         startTime = Time.time;
+
+        // disable the trigger gameobject
+        GetComponent<BoxCollider>().enabled = false;
 	}
 
     private void Update()
