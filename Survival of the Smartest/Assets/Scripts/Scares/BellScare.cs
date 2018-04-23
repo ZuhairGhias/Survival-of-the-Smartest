@@ -8,7 +8,6 @@ public class BellScare : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        print("BELL TRIGGERED");
         bell.Play();
         Destroy(this.gameObject);
     }
