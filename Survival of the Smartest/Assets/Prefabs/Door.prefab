@@ -7094,7 +7094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 114714141347391920}
-  openDoor: 1
+  openDoor: 0
 --- !u!114 &114667431936229116
 MonoBehaviour:
   m_ObjectHideFlags: 1
