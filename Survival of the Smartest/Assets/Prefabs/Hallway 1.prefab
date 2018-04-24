@@ -20193,7 +20193,7 @@ MonoBehaviour:
   rightHallPosition: {fileID: 4037490673855184}
   hallEnterTrigger: {fileID: 65178145338699682}
   maxLightIntensity: 1
-  minLightIntensity: 0.2
+  minLightIntensity: 0.1
   lightDimmingRate: 1
   test: 0
   testScare: {fileID: 1048136290860774}
@@ -22794,7 +22794,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: 1, y: 0.5}
+      localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: 6af015c1fe85c0e4aa276702c42eb571, type: 2}
@@ -22823,7 +22823,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: -0.46875, y: 0.5}
+      localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: 6af015c1fe85c0e4aa276702c42eb571, type: 2}
@@ -28796,7 +28796,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: 0.5, y: 3.5}
+      localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: 6af015c1fe85c0e4aa276702c42eb571, type: 2}
@@ -28825,7 +28825,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: -1.5, y: 3.5}
+      localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: 6af015c1fe85c0e4aa276702c42eb571, type: 2}
@@ -37539,7 +37539,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: 2.5, y: 3.5}
+      localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: 6af015c1fe85c0e4aa276702c42eb571, type: 2}
@@ -37568,7 +37568,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: 0.5, y: 3.5}
+      localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: 6af015c1fe85c0e4aa276702c42eb571, type: 2}
