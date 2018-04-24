@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+    public FPSMovementControl playerMovement;
+    public FPSCameraControl playerCamera;
+
     private GameObject currentHall = null;
     private GameObject oldHall = null;
     private GameObject rightHall = null;
@@ -48,12 +51,20 @@ public class GameManager : MonoBehaviour {
 
         if (rightAnswers == 10) {
             winUI.SetActive(true);
-            Time.timeScale = 0;
+
+            // disable player controls
+            playerMovement.enabled = false;
+            playerCamera.enabled = false;
+
             gameOver = true;
 
         } else if(wrongAnswers == 3){
             loseUI.SetActive(true);
-            Time.timeScale = 0;
+
+            // disable player controls
+            playerMovement.enabled = false;
+            playerCamera.enabled = false;
+
             gameOver = true;
         }
 
