@@ -20,10 +20,20 @@ public class GameManager : MonoBehaviour {
     private int spookMultiplierWrong = 10;
     private int spookMultiplierRight = 2;
 
+    public GameObject winUI;
+    public GameObject loseUI;
+
     /// <summary>
     /// Instantiates the next two halls in the game and deletes previous ones.</summary>
     /// <param name="currentHall">The hall that was entered.</param>
     public void GenerateNextHall(GameObject currentHall) {
+
+        if (rightAnswers == 10) {
+            winUI.SetActive(true);
+
+        } else if(wrongAnswers == 3){
+            loseUI.SetActive(true);
+        }
 
         // These halls are not visible any more
         Destroy(oldHall);

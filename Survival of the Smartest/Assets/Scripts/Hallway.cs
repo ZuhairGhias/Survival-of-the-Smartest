@@ -80,14 +80,14 @@ public class Hallway : MonoBehaviour
         if (testScare != null && test) {
             testScare.SetActive(true);
         }
-        else if (spookiness < 20 && easyScares.Length != 0) {
+        else if (spookiness < 10 && easyScares.Length != 0) {
             int scareIndex = Random.Range(0, easyScares.Length);
             easyScares[scareIndex].SetActive(true);
-        } else if(spookiness < 30 && mediumScares.Length != 0) {
+        } else if(spookiness < 20 && mediumScares.Length != 0) {
             int scareIndex = Random.Range(0, mediumScares.Length);
             mediumScares[scareIndex].SetActive(true);
         }
-        else if (hardScares.Length != 0) {
+        else if (spookiness < 30 && hardScares.Length != 0) {
             int scareIndex = Random.Range(0, hardScares.Length);
             hardScares[scareIndex].SetActive(true);
         }
