@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -22,6 +23,23 @@ public class GameManager : MonoBehaviour {
 
     public GameObject winUI;
     public GameObject loseUI;
+    private bool gameOver = false;
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+        if (gameOver) {
+            StartCoroutine(Restart());
+        }
+    }
+
+    private IEnumerator Restart()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("HallwayTest 1");
+    }
 
     /// <summary>
     /// Instantiates the next two halls in the game and deletes previous ones.</summary>
@@ -30,9 +48,13 @@ public class GameManager : MonoBehaviour {
 
         if (rightAnswers == 10) {
             winUI.SetActive(true);
+            Time.timeScale = 0;
+            gameOver = true;
 
         } else if(wrongAnswers == 3){
             loseUI.SetActive(true);
+            Time.timeScale = 0;
+            gameOver = true;
         }
 
         // These halls are not visible any more
