@@ -37,8 +37,8 @@ public class GameManager : MonoBehaviour {
 
     private IEnumerator Restart()
     {
-        yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("HallwayTest 1");
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     /// <summary>
