@@ -7,7 +7,7 @@ public class Question {
     public string question;
     public string correctAnswer;
     public string wrongAnswer;
-    private static Question[] questions = null;
+    private static List<Question> questions = new List<Question>();
 
     public Question(string question, string correctAnswer, string wrongAnswer) {
         this.question = question;
@@ -16,8 +16,8 @@ public class Question {
     }
 
     public static Question RandomQuestion() {
-        if (questions == null) {
-            questions = new Question[] {
+        if (questions.Count == 0) {
+            questions = new List<Question>(new Question[] {
             new Question("What chemical element gives the blood of a lobster a bluish tint?","Copper","Iron"),
             new Question("Bronze is an alloy consisting primarily of what two elements?","Copper & Tin","Aluminium & Iron"),
             new Question("Which is the most abundant metal in the earth’s crust?","Aluminum","Iron"),
@@ -46,10 +46,12 @@ public class Question {
             new Question("What was Walt Disney’s middle name?","Elias","Allan"),
             new Question("Which mammal has the longest gestation period?","Elephant","Kangaroo"),
             new Question("What is the three letter airport code for the Los Angeles International Airport?","LAX","LAS")
-            };
+            }) ;
         }
-
-        return questions[Random.Range(0, questions.Length)];
+        int questionNumber = Random.Range(0, questions.Count);
+        Question returnQuestion = questions[questionNumber];
+        questions.RemoveAt(questionNumber);
+        return returnQuestion;
     }
 
 }
